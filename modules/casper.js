@@ -1372,7 +1372,7 @@ Casper.prototype.injectClientUtils = function injectClientUtils(page) {
     if (true === clientUtilsInjected) {
         return;
     }
-    var clientUtilsPath = require('fs').pathJoin(phantom.casperPath, 'modules', 'clientutils.js');
+    var clientUtilsPath = require('fs').pathJoin(phantom.casperPath, 'modules', '__utils__.js');
     if (true === page.injectJs(clientUtilsPath)) {
         this.log("Successfully injected Casper client-side utilities", "debug");
     } else {
